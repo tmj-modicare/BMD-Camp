@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Centered Input Form</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <p>Bone Mineral Dencity Camp</p>
+    </div>
+
+    <!-- Centered input form -->
+    <div class="main-container">
+        <div class="container">
+            <div class="brand-logo"></div>
+            <div class="brand-title">Bone Health Camp</div>
+
+            <p>
+                बीएमडी चेकअप शिविर<br>
+                आपको और आपके परिवार को हमारे बीएमडी चेकअप शिविर में आमंत्रित किया जाता है। यह शिविर आपके अस्थि
+                स्वास्थ्य<br>
+                की जांच करने और ऑस्टियोपोरोसिस जैसी बीमारियों को रोकने में मदद करने के लिए आयोजित किया जा रहा है।<br>
+                <br>
+                दिनांक: 24 सितंबर 2023 (Sunday/रविवार)<br>
+                <br>
+                समय: सुबह 11 बजे से शाम 3 बजे तक<br>
+                <br>
+                स्थान: S.M.C Surati Ilab, Rayka Circle, Udhana, Surat - 394210, Gujarat<br>
+                <br>
+                पंजीकरण शुल्क: Rs. 100/-<br>
+                <br>
+                आपके स्वास्थ्य की देखभाल करना हमारी प्राथमिकता है।<br>
+            </p>
+
+            <div class="inputs">
+                <button type="button">Contact us <br> <span id="number"></span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>All Rights Reserved | BMD CAMP ADMINISTRATOR</p>
+    </div>
+
+    <script>
+
+        window.addEventListener('load', function () {
+            number = document.getElementById("number");
+            url = window.location.href;
+            result = parseURLParams(url)
+            number.innerHTML = result.no
+        })
+    </script>
+
+
+</body>
+
+</html>
