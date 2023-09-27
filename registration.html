@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Centered Input Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="header">
+    <p>Bone Mineral Dencity Camp</p>
+  </div>
+
+  <!-- Centered input form -->
+  <div class="main-container" style="height: 600px;">
+    <div class="container" style="height: 600px;">
+      <div class="brand-logo"></div>
+      <div class="brand-title">Bone Health Camp</div>
+
+      <input type="text" name="textToAppend" placeholder="Enter Mobile number">
+      <button onclick="appendText()" type="submit">Submit</button>
+      <P id="link"></P>
+
+      <button id="copy" type="button" onclick="copyText(this)" disabled>Copy Text</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>All Rights Reserved | BMD CAMP ADMINISTRATOR</p>
+  </div>
+
+  <script>
+
+    window.addEventListener('load', function () {
+      number = document.getElementById("number");
+      url = window.location.href;
+      result = parseURLParams(url)
+      number.innerHTML = result.no
+
+      const button = document.getElementById('copy');
+      button.disabled = true
+    })
+
+
+
+  </script>
+
+
+</body>
+
+</html>

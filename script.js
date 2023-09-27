@@ -26,3 +26,21 @@ function makePhoneCall() {
     window.open("tel:" + phoneNumber);
 }
 
+function appendText() {
+    const textToAppend = document.querySelector('[name="textToAppend"]').value;
+    const element = document.getElementById("link");
+    link.innerHTML = "https://bmd-camp.netlify.app/?no="
+    element.innerHTML += textToAppend;
+    const button = document.getElementById('copy');
+    
+    button.disabled = false
+
+}
+  
+
+function copyText(ths) {
+    const textToCopy = document.getElementById("link").textContent;
+    navigator.clipboard.writeText(textToCopy);
+    alert("Link Copied")
+  }
+  
