@@ -42,7 +42,7 @@
             </p>
 
             <div class="inputs">
-                <button type="button">Contact us <br> <span id="number"></span></button>
+                <button type="button" onclick="makePhoneCall()">Contact us <br> <span id="number"></span></button>
             </div>
         </div>
     </div>
@@ -59,6 +59,9 @@
             result = parseURLParams(url)
             number.innerHTML = result.no
         })
+
+
+
     </script>
 
 

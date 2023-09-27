@@ -18,5 +18,11 @@ function parseURLParams(url) {
     return parms;
 }
 
-
+function makePhoneCall() {
+    number = document.getElementById("number");
+    url = window.location.href;
+    result = parseURLParams(url)
+    const phoneNumber = result.no; // Replace this with the phone number you want to call.
+    window.open("tel:" + phoneNumber);
+}
 
