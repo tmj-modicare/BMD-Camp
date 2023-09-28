@@ -27,26 +27,19 @@ function makePhoneCall() {
 }
 
 function appendText() {
-
-    if (document.querySelector('[name="textToAppend"]').value == "") {
-        return
-    }
-
     const textToAppend = document.querySelector('[name="textToAppend"]').value;
     const element = document.getElementById("link");
-    url = window.location.href;
-    result = parseURLParams(url)
-    element.innerHTML = url.replace("/registration","")
-    element.innerHTML += "?no="
+    link.innerHTML = "https://calciumcamp.netlify.app/?no="
     element.innerHTML += btoa(textToAppend);
+    const button = document.getElementById('copy');
+    
+    button.disabled = false
 
-    
-    
 }
+  
 
-function copyText() {
-    
+function copyText(ths) {
     const textToCopy = document.getElementById("link").textContent;
     navigator.clipboard.writeText(textToCopy);
-    alert("Your BMD Camp Link is Copied \n\n"+textToCopy)
-}
+    alert("Link Copied")
+  }
