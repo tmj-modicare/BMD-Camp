@@ -10,6 +10,8 @@
 
   <script src="script.js"></script>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -27,7 +29,7 @@
       <div class="brand-logo"></div>
       <div class="brand-title">Bone Health Camp</div>
 
-      <input type="number" name="textToAppend" placeholder="Enter Mobile number">
+      <input type="number" onkeypress="phoneno()" id="phone" name="textToAppend" placeholder="Enter Mobile number">
       <button onclick="appendText()" type="submit">Submit</button>
       <P id="link"></P>
 
@@ -46,9 +48,28 @@
       button.disabled = true
     })
 
-
-
   </script>
+
+  <script>
+    function phoneno() {
+      $('#phone').keypress(function (e) {
+        var a = [];
+        var k = e.which;
+
+        for (i = 48; i < 58; i++)
+          a.push(i);
+
+        if (!(a.indexOf(k) >= 0) || document.getElementById("phone").value.toString().length >= 10)
+          e.preventDefault();
+
+
+   
+
+      });
+    }
+  </script>
+
+
 
 
 </body>
