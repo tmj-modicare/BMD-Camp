@@ -29,7 +29,10 @@ function makePhoneCall() {
 function appendText() {
     const textToAppend = document.querySelector('[name="textToAppend"]').value;
     const element = document.getElementById("link");
-    link.innerHTML = "https://bmd-camp.netlify.app/?no="
+    url = window.location.href;
+    result = parseURLParams(url)
+    element.innerHTML = url.replace("/registration","")
+    element.innerHTML += "?no="
     element.innerHTML += textToAppend;
     const button = document.getElementById('copy');
     
