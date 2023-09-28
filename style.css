@@ -8,19 +8,20 @@ input {
     margin: 0;
     width: 100%;
     border-radius: 10px;
-    height: 1000px;
+    height: 900px;
     display: flex;
     align-items: center;
     justify-content: center;
     place-items: center;
     overflow: hidden;
     font-family: poppins;
+    padding-bottom: 45px;
 }
 
 .container {
     position: relative;
     width: 350px;
-    height: 1000px;
+    height: 900px;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
@@ -38,15 +39,16 @@ input {
     margin: auto;
     border-radius: 10%;
     box-sizing: border-box;
-    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white; 
 }
 
 .brand-title {
     margin-top: 10px;
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 40px;
     color: #329181;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .inputs {
