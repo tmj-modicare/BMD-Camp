@@ -40,10 +40,10 @@ function appendText() {
     element.innerHTML += "?no="
     element.innerHTML += btoa(textToAppend);
 
-    element.hidden = true;
-
+    
     const textToCopy = document.getElementById("link").textContent;
     navigator.clipboard.writeText(textToCopy);
     alert("Your BMD Camp Link is Copied \n\n"+element.innerHTML)
-
+    
+    element.hidden = true;
 }
