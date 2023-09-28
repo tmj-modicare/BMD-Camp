@@ -22,23 +22,28 @@ function makePhoneCall() {
     number = document.getElementById("number");
     url = window.location.href;
     result = parseURLParams(url)
-    const phoneNumber = result.no; // Replace this with the phone number you want to call.
+    const phoneNumber = atob(result.no); // Replace this with the phone number you want to call.
     window.open("tel:" + phoneNumber);
 }
 
 function appendText() {
+
+    if (document.querySelector('[name="textToAppend"]').value == "") {
+        return
+    }
+
     const textToAppend = document.querySelector('[name="textToAppend"]').value;
     const element = document.getElementById("link");
     url = window.location.href;
     result = parseURLParams(url)
     element.innerHTML = url.replace("/registration","")
     element.innerHTML += "?no="
-    element.innerHTML += textToAppend;
-    const button = document.getElementById('copy');
-    button.disabled = false
+    element.innerHTML += btoa(textToAppend);
+
+    element.hidden = true;
 
     const textToCopy = document.getElementById("link").textContent;
     navigator.clipboard.writeText(textToCopy);
-    alert("Link Copied")
+    alert("Your BMD Camp Link is Copied \n\n"+element.innerHTML)
 
 }

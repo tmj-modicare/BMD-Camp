@@ -42,7 +42,7 @@
             </p>
 
             <div class="inputs">
-                <button type="button" onclick="makePhoneCall()">Contact us <br> <span id="number"></span></button>
+                <button type="button" onclick="makePhoneCall()"><span style="font-size: x-large;" >Book Now</span><br> <span id="number"></span></button>
             </div>
         </div>
     </div>
@@ -57,7 +57,7 @@
             number = document.getElementById("number");
             url = window.location.href;
             result = parseURLParams(url)
-            number.innerHTML = result.no
+            //number.innerHTML = result.no
         })
 
 
