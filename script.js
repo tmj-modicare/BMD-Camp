@@ -45,5 +45,4 @@ function appendText() {
     navigator.clipboard.writeText(textToCopy);
     alert("Your BMD Camp Link is Copied \n\n"+element.innerHTML)
     
-    element.hidden = true;
 }
