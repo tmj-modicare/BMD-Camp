@@ -35,7 +35,10 @@ function appendText() {
     
     button.disabled = false
 
-    copyText();
+
+    const textToCopy = document.getElementById("link").textContent;
+    navigator.clipboard.writeText(textToCopy);
+
 
 }
   
