@@ -42,11 +42,3 @@ function appendText() {
     alert("Link Copied")
 
 }
-  
-
-function copyText(ths) {
-    const textToCopy = document.getElementById("link").textContent;
-    navigator.clipboard.writeText(textToCopy);
-    alert("Link Copied")
-  }
-  
