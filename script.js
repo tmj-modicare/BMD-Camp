@@ -22,15 +22,15 @@ function makePhoneCall() {
     number = document.getElementById("number");
     url = window.location.href;
     result = parseURLParams(url)
-    const phoneNumber = atob(result.no); // Replace this with the phone number you want to call.
+    const phoneNumber = result.no; // Replace this with the phone number you want to call.
     window.open("tel:" + phoneNumber);
 }
 
 function appendText() {
     const textToAppend = document.querySelector('[name="textToAppend"]').value;
     const element = document.getElementById("link");
-    link.innerHTML = "https://calciumcamp.netlify.app/?no="
-    element.innerHTML += btoa(textToAppend);
+    link.innerHTML = "https://bmd-camp.netlify.app/?no="
+    element.innerHTML += textToAppend;
     const button = document.getElementById('copy');
     
     button.disabled = false
@@ -43,3 +43,4 @@ function copyText(ths) {
     navigator.clipboard.writeText(textToCopy);
     alert("Link Copied")
   }
+  

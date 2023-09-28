@@ -22,15 +22,13 @@
   <div class="main-container" style="height: 600px;">
     <div class="container" style="height: 600px;">
       <div class="brand-logo"></div>
-      <div class="brand-title"><span style="font-size: 25px;" >Bone Health Camp</span></div>
+      <div class="brand-title">Bone Health Camp</div>
 
-      <br>
       <input type="text" name="textToAppend" placeholder="Enter Mobile number">
-      <br>
       <button onclick="appendText()" type="submit">Submit</button>
       <P id="link"></P>
-      <button onclick="copyText()" type="submit">Copy Link</button>
 
+      <button id="copy" type="button" onclick="copyText(this)" disabled>Copy Text</button>
     </div>
   </div>
 
