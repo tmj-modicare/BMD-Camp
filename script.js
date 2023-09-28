@@ -35,8 +35,11 @@ function appendText() {
     element.innerHTML += "?no="
     element.innerHTML += textToAppend;
     const button = document.getElementById('copy');
-    
     button.disabled = false
+
+    const textToCopy = document.getElementById("link").textContent;
+    navigator.clipboard.writeText(textToCopy);
+    alert("Link Copied")
 
 }
   
