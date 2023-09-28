@@ -43,7 +43,7 @@ function appendText() {
     element.hidden = true;
 
     const textToCopy = document.getElementById("link").textContent;
-    navigator.clipboard.writeText(element.innerHTML);
+    navigator.clipboard.writeText(textToCopy);
     alert("Your BMD Camp Link is Copied \n\n"+element.innerHTML)
 
 }
